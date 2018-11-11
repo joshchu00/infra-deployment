@@ -11,10 +11,11 @@ infra-1 ansible_host=127.0.0.1 ansible_port=2222 ansible_user=vagrant ansible_ss
 [infra:vars]
 DEPLOYMENT_ROOT=/root/infra
 
-POSTGRES_IMAGE=postgres:9.6.5-alpine
+MYSQL_IMAGE=mysql:5.7.22
 CASSANDRA_IMAGE=cassandra:3.11.0
 ZOOKEEPER_IMAGE=confluentinc/cp-zookeeper:3.3.0
 KAFKA_IMAGE=confluentinc/cp-kafka:3.3.0
+SCHEMA_REGISTRY_IMAGE=confluentinc/cp-schema-registry:3.3.0
 
-POSTGRES_PASSWORD=test
+MYSQL_ROOT_PASSWORD=test
 HOST_IP=127.0.0.1
