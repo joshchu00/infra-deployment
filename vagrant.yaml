@@ -1,0 +1,17 @@
+all:
+  children:
+    infra:
+      hosts:
+        infra-1:
+          ansible_host: 127.0.0.1
+          ansible_port: 2222
+          ansible_user: vagrant
+          ansible_ssh_private_key_file: /Users/joshchu/Programs/vagrant/test/.vagrant/machines/default/virtualbox/private_key
+      vars:
+        deployment_root: /root/infra
+        mysql_image: mysql:5.7.24
+        cassandra_image: cassandra:3.11.3
+        zookeeper_image: confluentinc/cp-zookeeper:5.0.1
+        kafka_image: confluentinc/cp-kafka:5.0.1
+        mysql_root_password: test
+        host_ip: 127.0.0.1
